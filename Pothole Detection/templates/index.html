@@ -1,0 +1,100 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Real-Time Pothole Detection</title>
+</head>
+<body>
+    <h1>Real-Time Pothole Detection</h1>
+    <form action="/detect" method="POST" enctype="multipart/form-data">
+        <input type="file" name="video" accept="video/*">
+        <input type="submit" value="Detect">
+    </form>
+    <div id="video-container">
+        <video id="video-player" autoplay></video>
+    </div>
+
+    <script>
+        // Display the video file in the video player element
+        function loadVideo() {
+            const videoPlayer = document.getElementById('video-player');
+            const fileInput = document.querySelector('input[type="file"]');
+            videoPlayer.src = URL.createObjectURL(fileInput.files[0]);
+        }
+
+        // Call the loadVideo function when a video file is selected
+        const fileInput = document.querySelector('input[type="file"]');
+        fileInput.addEventListener('change', loadVideo);
+    </script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pothole Detection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        h1 {
+            text-align: center;
+        }
+        
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .form-group input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        
+        .form-group input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .form-group input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Pothole Detection</h1>
+        <form action="/detect" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="file">Select Image or Video:</label>
+                <input type="file" name="file" id="file" accept=".jpg,.jpeg,.png,.mp4,.avi,.mov" required>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Detect">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+
+
